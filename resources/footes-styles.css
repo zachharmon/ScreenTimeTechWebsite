@@ -1,0 +1,22 @@
+:root{
+    --primary-color: #1190cb;
+    --secondary-color: #fff;
+    --tertiary-color: #e8491d;
+    --blue-off-white: #c3dadb;
+}
+
+footer#main-footer{
+    background-color: var(--blue-off-white);
+    border-top: var(--primary-color) 3px solid;
+    width: 100%;
+    overflow: hidden;
+    margin: -8px;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    position: fixed;
+    bottom: 0;
+
+    font-size: 0.8em;
+}
