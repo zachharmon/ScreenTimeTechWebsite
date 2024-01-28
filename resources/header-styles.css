@@ -1,0 +1,119 @@
+:root{
+    --header-height: 100px;
+    --primary-color: #1190cb;
+    --secondary-color: #fff;
+    --tertiary-color: #e8491d;
+    --blue-off-white: #c3dadb;
+}
+
+header#main-header{
+    background-color: var(--blue-off-white);
+    border-bottom: var(--primary-color) 3px solid;
+    height: var(--header-height);
+    width: auto;
+    overflow: hidden;
+    margin: -8px;
+    display: flex;
+    flex-direction: row;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header#main-header img{
+    width: auto;
+    height: var(--header-height);
+}
+
+header#main-header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex: 1;
+}
+
+header#main-header nav a{
+    color: black;
+    text-decoration: none!important;
+    font-size: calc(min(3vw, 1.5em));
+    margin: 0 10px;
+}
+
+header#main-header nav#header-nav-large a{
+    border-right: 1px solid var(--primary-color);
+    padding-right: 20px;
+}
+
+header#main-header nav#header-nav-large a:last-child{
+    border: none;
+}
+
+header#main-header nav a:hover{
+    color: rgba(0, 0, 0, 0.3);
+}
+
+header#main-header #header-nav-dropdown{
+    display: none;
+    align-items: center;
+    right: 0;
+    background-color: var(--blue-off-white);
+    flex: 1;
+    z-index: 1;
+}
+
+header#main-header #header-nav-dropdown-button{
+    color: black;
+    font-size: calc(min(8vw, 2em));
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+header#main-header #header-nav-dropdown-area{
+    background-color: var(--blue-off-white);
+    border: 3px solid var(--primary-color);
+    border-radius: 5px;
+    display: none;
+}
+
+header#main-header #header-nav-dropdown-button:hover{
+    opacity: 0.3;
+}
+
+header#main-header #header-nav-dropdown-button:hover + #header-nav-dropdown-area, 
+header#main-header #header-nav-dropdown-area:hover, 
+header#main-header #header-nav-dropdown-button:focus + #header-nav-dropdown-area,
+header#main-header #header-nav-dropdown-area:focus{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    right: 5px;
+    top: calc(50px + calc(min(8vw, 2em)/2));
+    gap: 10px;
+    padding: 10px;
+}
+
+header#main-header #header-nav-dropdown-area a{
+    color: black;
+    text-decoration: none!important;
+    font-size: calc(min(6vw, 1.5em));
+    width: 100%;
+}
+
+header#main-header #header-nav-dropdown-area a:hover{
+    color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+@media screen and (max-width: 768px){
+    header#main-header nav{
+        display: none;
+    }
+
+    header#main-header #header-nav-dropdown{
+        display: flex;
+    }
+    
+}
