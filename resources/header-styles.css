@@ -1,22 +1,28 @@
 :root{
-    --header-height: 100px;
+    --header-height: 75px;
     --primary-color: #1190cb;
     --secondary-color: #fff;
     --tertiary-color: #e8491d;
     --blue-off-white: #c3dadb;
+    --dark-off-white: #919191;
 }
 
 header#main-header{
     background-color: var(--blue-off-white);
-    border-bottom: var(--primary-color) 3px solid;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
     height: var(--header-height);
     width: auto;
     overflow: hidden;
-    margin: -8px;
     display: flex;
     flex-direction: row;
 
     font-family: Arial, Helvetica, sans-serif;
+
+    z-index: 2;
+}
+
+body{
+    margin: 0;
 }
 
 header#main-header img{
@@ -71,7 +77,7 @@ header#main-header #header-nav-dropdown-button{
 
 header#main-header #header-nav-dropdown-area{
     background-color: var(--blue-off-white);
-    border: 3px solid var(--primary-color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     display: none;
 }
@@ -89,7 +95,7 @@ header#main-header #header-nav-dropdown-area:focus{
     flex-direction: column;
     flex-wrap: nowrap;
     right: 5px;
-    top: calc(50px + calc(min(8vw, 2em)/2));
+    top: calc(calc(var(--header-height)/2) + calc(min(8vw, 2em)/2));
     gap: 10px;
     padding: 10px;
 }
@@ -107,7 +113,7 @@ header#main-header #header-nav-dropdown-area a:hover{
 
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 900px){
     header#main-header nav{
         display: none;
     }

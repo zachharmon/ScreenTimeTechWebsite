@@ -1,0 +1,79 @@
+:root{
+    --primary-color: #1190cb;
+    --secondary-color: #fff;
+    --tertiary-color: #e8491d;
+    --blue-off-white: #c3dadb;
+    --off-white: #f5f5f5;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+main{
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 800px;
+
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../resources/background.png');
+
+    
+}
+
+main h1{
+    text-align: center;
+    font-size: 3em;
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+
+    padding-top: 50px;
+
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+}
+
+main #info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding: 50px 0;
+    gap: 20px;
+}
+
+main .infoCard{
+    width: 25%;
+    background-color: var(--off-white);
+
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+main .infoCard h2{
+    text-align: center;
+    font-size: 2em;
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+main .infoCard p{
+    text-align: center;
+    font-size: 1.5em;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+main #info .infoCard ul li, main #info .infoCard ol li{
+    font-size: 1.5em; 
+    color: black;
+    margin: 0;
+    padding: 10px 5px;
+}
